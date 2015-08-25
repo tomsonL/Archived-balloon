@@ -1,4 +1,4 @@
-class BallonDesc extends lark.Sprite
+class BalloonDesc extends lark.Sprite
 {
     public constructor( ) {
         super();

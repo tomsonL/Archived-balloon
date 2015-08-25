@@ -8,10 +8,10 @@ class Main extends lark.Sprite {
 
         //var api = new ApiHandler();
         //api.request();
-        //this.on(lark.Event.ADDED_TO_STAGE,dispather.ballon,this);
+        //this.on(lark.Event.ADDED_TO_STAGE,dispather.balloon,this);
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.voteList,this);
 
-        //this.on(lark.Event.ADDED_TO_STAGE,dispather.ballonDesc,this);
+        //this.on(lark.Event.ADDED_TO_STAGE,dispather.balloonDesc,this);
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.register,this);
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.register1,this);
 
@@ -29,6 +29,7 @@ class Main extends lark.Sprite {
 */
     }
 
+
     public showIcon(e:lark.Event) {
         var imageLoader:lark.ImageLoader = e.target;
         var bitmap = new lark.Bitmap(imageLoader.data);
@@ -45,7 +46,6 @@ class Main extends lark.Sprite {
     }
 }
 
-
 class Dispather extends lark.Sprite
 {
     public splash( event:lark.Event ){
@@ -57,9 +57,9 @@ class Dispather extends lark.Sprite
         var test = new Test();
         this.addChild( test );
     }
-    public ballon( event:lark.Event ){
-        var ballon = new Ballon();
-        this.addChild( ballon );
+    public balloon( event:lark.Event ){
+        var balloon = new Balloon();
+        this.addChild( balloon );
     }
 
     public productList( event:lark.Event ){
@@ -73,9 +73,9 @@ class Dispather extends lark.Sprite
         this.addChild(vote_list);
     }
 
-    public ballonDesc( event:lark.Event ){
-        var ballonDesc = new BallonDesc();
-        this.addChild(ballonDesc);
+    public balloonDesc( event:lark.Event ){
+        var balloonDesc = new BalloonDesc();
+        this.addChild(balloonDesc);
     }
 
     public register( event:lark.Event ){

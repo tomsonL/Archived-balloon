@@ -15,9 +15,9 @@ var Main = (function (_super) {
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.splash,this);
         //var api = new ApiHandler();
         //api.request();
-        //this.on(lark.Event.ADDED_TO_STAGE,dispather.ballon,this);
+        //this.on(lark.Event.ADDED_TO_STAGE,dispather.balloon,this);
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.voteList,this);
-        //this.on(lark.Event.ADDED_TO_STAGE,dispather.ballonDesc,this);
+        //this.on(lark.Event.ADDED_TO_STAGE,dispather.balloonDesc,this);
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.register,this);
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.register1,this);
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.plusone,this);
@@ -64,9 +64,9 @@ var Dispather = (function (_super) {
         var test = new Test();
         this.addChild(test);
     };
-    p.ballon = function (event) {
-        var ballon = new Ballon();
-        this.addChild(ballon);
+    p.balloon = function (event) {
+        var balloon = new Balloon();
+        this.addChild(balloon);
     };
     p.productList = function (event) {
         var product_list = new ProductList();
@@ -76,9 +76,9 @@ var Dispather = (function (_super) {
         var vote_list = new VoteList();
         this.addChild(vote_list);
     };
-    p.ballonDesc = function (event) {
-        var ballonDesc = new BallonDesc();
-        this.addChild(ballonDesc);
+    p.balloonDesc = function (event) {
+        var balloonDesc = new BalloonDesc();
+        this.addChild(balloonDesc);
     };
     p.register = function (event) {
         var register = new Register();

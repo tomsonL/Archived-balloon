@@ -16,30 +16,25 @@ class BalloonHistory extends lark.Sprite
                     <s:Image left="50" top="56" width="42" height="66" source="resources/product_ballon/arrow.png" />
                     <s:Image left="0" top="0" width="96" height="136" horizontalCenter="0" source="resources/product_ballon/needle.png" />
                     <s:Image left="848" top="56" width="66" height="66" source="resources/product_ballon/setting_btn.png" />
-
                     <s:Group horizontalCenter="0" top="136" height="1464">
                         <s:Label id="lable_already" fontSize="36" fontFamily="SimHei" textColor="0xe85846" left="152" top="1252"/>
                         <s:Label id="lable_left" fontSize="36" fontFamily="SimHei" textColor="0xe85846" left="560" top="1252"/>
                         <s:Label id="lable_total" fontSize="36" fontFamily="SimHei" textColor="0xe85846" left="152" top="1310"/>
                         <s:Image left="438" top="1000" width="280" height="440" source="resources/product_ballon/rope.png" />
                         <s:Image left="570" top="1300" width="180" height="160" source="resources/product_ballon/press_btn.png" />
-                        <s:Group id="group_time" top="1098" left="208" width="536">
-                            <s:Image width="66" height="88" source="resources/product_ballon/time_bg.png" />
-                            <s:Image width="66" height="88" source="resources/product_ballon/time_bg.png" />
-                            <s:Image top="58" width="12" height="36" source="resources/product_ballon/colon.png" />
-                            <s:Image width="66" height="88" source="resources/product_ballon/time_bg.png" />
-                            <s:Image width="66" height="88" source="resources/product_ballon/time_bg.png" />
-                            <s:Image top="58" width="12" height="36" source="resources/product_ballon/colon.png" />
-                            <s:Image width="66" height="88" source="resources/product_ballon/time_bg.png" />
-                            <s:Image width="66" height="88" source="resources/product_ballon/time_bg.png" />
+                        <s:Image id="balloon" horizontalCenter="0" alpha="0.95" bottom="390" source="resources/exploding/exploding.png" />
+                    </s:Group>
+
+                    <s:Group id="result" width="876" height="372" bottom="140">
+                        <s:Image source="resources/history/blow_bg.png" width="100%" height="100%"/>
+                        <s:Group id="result_content" width="734" height="162" bottom="40" left="36">
+                            <s:Image source="resources/history/profile.png" width="162" height="162"/>
+                            <s:Group id="result_content_label" height="100%">
+                                <s:Label fontSize="40" id="user" />
+                                <s:Label fontSize="40" id="total" />
+                                <s:Label fontSize="40" id="time" />
+                            </s:Group>
                         </s:Group>
-                        <s:Image left="148" top="1206" width="628" height="28" source="resources/gray.png"/>
-                        <s:ProgressBar id="progress_bar" width="628" height="28" left="148" top="1206" value="50" minimum="0" maximum="100" >
-                            <s:Skin>
-                                <s:Image id="thumb" width="100%" height="100%" source="resources/red.png" scale9Grid="1,1,4,4"/>
-                            </s:Skin>
-                        </s:ProgressBar>
-                        <s:Image id="balloon" horizontalCenter="0" alpha="0.95" bottom="390" source="resources/product_ballon/ballon.png" />
                     </s:Group>
 
                 </s:Group>
@@ -51,14 +46,10 @@ class BalloonHistory extends lark.Sprite
         var panel = new clazz();
 
         this.addChild( panel );
-        var layout = new swan.HorizontalLayout();
-        layout.gap = 10;
-        layout.verticalAlign = "middle";
-        panel.group_time.layout = layout;
 
-        panel.lable_already.text="已被吹 4599 次";
-        panel.lable_left.text="还需吹 1412 次";
-        panel.lable_total.text="总需 6000 次";
+        panel.user.text="用户名：杨幂";
+        panel.total.text="本期参与 1412 次";
+        panel.time.text="吹爆时间 2015年06月12日 11:23";
         panel.scroller.height=panel.stage.stageHeight;
 
         var persent:number=1;
@@ -68,6 +59,13 @@ class BalloonHistory extends lark.Sprite
         panel.balloon.height = b_height * persent;
         panel.balloon.width = b_width * persent;
 
+        var layout_result_content = new swan.HorizontalLayout();
+        layout_result_content.gap = 20;
+        panel.result_content.layout = layout_result_content;
+
+        var layout_result_content_label = new swan.VerticalLayout();
+        layout_result_content_label.gap=20;
+        panel.result_content_label.layout = layout_result_content_label
 
 
     }
