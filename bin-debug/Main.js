@@ -22,9 +22,10 @@ var Main = (function (_super) {
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.register1,this);
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.plusone,this);
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.redeem,this);
-        this.on(lark.Event.ADDED_TO_STAGE, dispather.balloonHistory, this);
+        //this.on(lark.Event.ADDED_TO_STAGE,dispather.balloonHistory,this);
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.productList,this);
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.test,this);
+        this.on(lark.Event.ADDED_TO_STAGE, dispather.Participants, this);
         /*
                 var imageLoader = new lark.ImageLoader();
                 //imageLoader.load("http://img4.imgtn.bdimg.com/it/u=1966084478,4067726004&fm=23&gp=0.jpg");
@@ -101,6 +102,9 @@ var Dispather = (function (_super) {
     p.plusone = function (event) {
         var register = new PlusOne();
         this.addChild(register);
+    };
+    p.Participants = function (event) {
+        this.addChild(new Participants());
     };
     return Dispather;
 })(lark.Sprite);
