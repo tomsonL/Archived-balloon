@@ -25,7 +25,9 @@ var Main = (function (_super) {
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.balloonHistory,this);
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.productList,this);
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.test,this);
-        this.on(lark.Event.ADDED_TO_STAGE, dispather.Participants, this);
+        //this.on(lark.Event.ADDED_TO_STAGE,dispather.Participants,this);
+        //this.on(lark.Event.ADDED_TO_STAGE,dispather.Winner,this);
+        this.on(lark.Event.ADDED_TO_STAGE, dispather.Share, this);
         /*
                 var imageLoader = new lark.ImageLoader();
                 //imageLoader.load("http://img4.imgtn.bdimg.com/it/u=1966084478,4067726004&fm=23&gp=0.jpg");
@@ -105,6 +107,12 @@ var Dispather = (function (_super) {
     };
     p.Participants = function (event) {
         this.addChild(new Participants());
+    };
+    p.Winner = function (event) {
+        this.addChild(new Winner());
+    };
+    p.Share = function (event) {
+        this.addChild(new Share());
     };
     return Dispather;
 })(lark.Sprite);
