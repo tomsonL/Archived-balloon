@@ -104,5 +104,6 @@ class Dispather extends lark.Sprite
         var register = new PlusOne();
         this.addChild(register);
     }
-
+rk.log("splashStart");
+    }
 }
