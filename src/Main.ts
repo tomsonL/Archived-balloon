@@ -13,7 +13,7 @@ class Main extends lark.Sprite {
 
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.balloonDesc,this);
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.register,this);
-        //this.on(lark.Event.ADDED_TO_STAGE,dispather.register1,this);
+        this.on(lark.Event.ADDED_TO_STAGE,dispather.register1,this);
 
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.plusone,this);
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.redeem,this);
@@ -23,7 +23,7 @@ class Main extends lark.Sprite {
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.test,this);
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.Participants,this);
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.Winner,this);
-        this.on(lark.Event.ADDED_TO_STAGE,dispather.Share,this);
+        //this.on(lark.Event.ADDED_TO_STAGE,dispather.Share,this);
 /*
         var imageLoader = new lark.ImageLoader();
         //imageLoader.load("http://img4.imgtn.bdimg.com/it/u=1966084478,4067726004&fm=23&gp=0.jpg");
@@ -87,7 +87,7 @@ class Dispather extends lark.Sprite
     }
 
     public register1( event:lark.Event ){
-        var register = new Register();
+        var register = new Register1();
         this.addChild(register);
     }
 
@@ -95,7 +95,6 @@ class Dispather extends lark.Sprite
         var redeem = new Redeem();
         this.addChild(redeem);
     }
-
     public splashStart( event:lark.Event ){
         lark.log("splashStart");
     }
