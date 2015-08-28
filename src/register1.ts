@@ -34,6 +34,12 @@ class Register1 extends lark.Sprite
         this.org_phone = panel.phone.text;
         panel.phone.on( lark.Event.CHANGE, this.changing, this );
         panel.phone.on( lark.Event.FOCUS_OUT, this.complete, this );
+
+
+        var api = new ApiHandler();
+        var param = new Array('user');
+        api.request();
+
     }
 
 

@@ -19,7 +19,7 @@ var Main = (function (_super) {
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.voteList,this);
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.balloonDesc,this);
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.register,this);
-        //this.on(lark.Event.ADDED_TO_STAGE,dispather.register1,this);
+        this.on(lark.Event.ADDED_TO_STAGE, dispather.register1, this);
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.plusone,this);
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.redeem,this);
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.balloonHistory,this);
@@ -27,7 +27,7 @@ var Main = (function (_super) {
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.test,this);
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.Participants,this);
         //this.on(lark.Event.ADDED_TO_STAGE,dispather.Winner,this);
-        this.on(lark.Event.ADDED_TO_STAGE, dispather.Share, this);
+        //this.on(lark.Event.ADDED_TO_STAGE,dispather.Share,this);
         /*
                 var imageLoader = new lark.ImageLoader();
                 //imageLoader.load("http://img4.imgtn.bdimg.com/it/u=1966084478,4067726004&fm=23&gp=0.jpg");
@@ -88,7 +88,7 @@ var Dispather = (function (_super) {
         this.addChild(register);
     };
     p.register1 = function (event) {
-        var register = new Register();
+        var register = new Register1();
         this.addChild(register);
     };
     p.redeem = function (event) {

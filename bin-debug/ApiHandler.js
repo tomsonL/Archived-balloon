@@ -11,9 +11,9 @@ var ApiHandler = (function (_super) {
     function ApiHandler() {
         _super.call(this);
         this.base_url = "http://a.1kuaichui.cn/";
-        this.request();
     }
     var d = __define,c=ApiHandler;p=c.prototype;
+    //public request( url:String, param:Array ){
     p.request = function () {
         var url = this.base_url + "user/check_username/";
         var request = new lark.HttpRequest();
@@ -21,17 +21,17 @@ var ApiHandler = (function (_super) {
             switch (evt.type) {
                 case lark.Event.COMPLETE:
                     var request = evt.currentTarget;
-                    console.log("respHandler:\n", request.response);
+                    console.log("respHandler2:\n", request.response);
                     break;
                 case lark.Event.IO_ERROR:
                     console.log("respHandler io error");
                     break;
             }
         };
+        request.open(url, lark.HttpMethod.GET);
+        request.send("a=1");
         request.once(lark.Event.COMPLETE, respHandler, null);
         request.once(lark.Event.IO_ERROR, respHandler, null);
-        request.open(url, lark.HttpMethod.POST);
-        request.send("user_name=18600363636");
     };
     return ApiHandler;
 })(lark.Sprite);
